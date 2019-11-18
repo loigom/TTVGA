@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    "name": "TTVGA",
+    "version": "2",
+    "description":"A simple script to autoclick the channel points gift button that occasionally shows up.",
+    
+    "content_scripts": [
+        {
+            "matches":["*://www.twitch.tv/*"],
+            "js":["jquery.js",
+                  "TTVGA.js",
+                  "main.js"]
+        }
+    ] 
+}
