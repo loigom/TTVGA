@@ -2,4 +2,4 @@ A simple script to autoclick the channel points gift button that occasionally sh
 
 [Tampermonkey version.](https://pastebin.com/raw/XxTu02tb)
 
-[Firefox extension.](https://addons.mozilla.org/en-US/firefox/user/14973153/)
+[Firefox extension.](https://addons.mozilla.org/en-US/firefox/addon/twitch-tv-gift-autoclicker/)
