@@ -8,22 +8,19 @@ Tampermonkey:
 // ==UserScript==
 // @name         TTVGA
 // @namespace    std KEKW
-// @version      4
+// @version      5
 // @description  Clicks the gift button thingy.
-// @author       u/cognitively_edgy
+// @author       github.com/loigom
 // @match        *://www.twitch.tv/*
 // ==/UserScript==
 
-var chatButtonsCollection;
-var giftBtnCollection;
+let giftBtnCollection, i;
 
 function main() {
-    chatButtonsCollection = document.getElementsByClassName("chat-input__buttons-container tw-flex tw-justify-content-between tw-mg-t-1")
-    if (chatButtonsCollection.length > 0) {
-        giftBtnCollection = chatButtonsCollection[0].getElementsByClassName("tw-button tw-button--success");
-        if (giftBtnCollection.length > 0) {
-            giftBtnCollection[0].click();
-            console.log("TTVGA clicked!");
+    giftBtnCollection = document.getElementsByTagName("button");
+    for (i = 0; i < giftBtnCollection.length; i++) {
+        if (giftBtnCollection[i].getAttribute("aria-label") === "Claim Bonus") {
+            giftBtnCollection[i].click();
         }
     }
 }
